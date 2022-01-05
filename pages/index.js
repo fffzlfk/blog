@@ -16,18 +16,6 @@ export default function Index({ posts }) {
       <Head>
         <title>{HOME_NAME}</title>
       </Head>
-      {/* <ul>
-        {posts.map((post) => (
-          <li key={post.filePath}>
-            <Link
-              as={`/posts/${post.filePath.replace(/\.mdx?$/, '')}`}
-              href={`/posts/[slug]`}
-            >
-              <a>{post.data.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul> */}
       <Container>
         <Intro />
         {posts.length > 0 && <MoreStories posts={posts} />}

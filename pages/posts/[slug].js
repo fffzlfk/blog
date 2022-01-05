@@ -29,7 +29,7 @@ export default function PostPage({ source, frontMatter }) {
             title={frontMatter.title}
             date={frontMatter.date}
           />
-          <div className="mx-24 px-24">
+          <div className="mx-1 px-1">
             <main className={markdownStyles['markdown']}>
               <MDXRemote {...source} components={components} />
             </main>
