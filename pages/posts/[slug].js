@@ -31,7 +31,9 @@ export default function PostPage({ source, frontMatter }) {
           />
           <div className="mx-1 px-1">
             <main className={markdownStyles['markdown']}>
-              <MDXRemote {...source} components={components} />
+              <div className="text-gray-600 dark:text-gray-300">
+                <MDXRemote {...source} components={components} />
+              </div>
             </main>
           </div>
         </article>

@@ -6,6 +6,17 @@
 	margin: 0;
 	padding: 10%;
 }
+
+/* .markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+	@apply text-gray-600;
+	@apply dark:text-gray-300;
+} */
+
 .markdown h1 {
 	font-size: 2.2em;
 	font-weight: 700;

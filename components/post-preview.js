@@ -10,7 +10,7 @@ export default function PostPreview({
     <div>
       <div className="mb-5">
       </div>
-      <h3 className="text-3xl mb-3 leading-snug">
+      <h3 className="text-gray-600 dark:text-gray-300 text-3xl mb-3 leading-snug">
         <Link as={`/posts/${slug.replace(/\.mdx?$/, '')}`}
               href={`/posts/[slug]`}>
           <a className="hover:underline">{title}</a>
