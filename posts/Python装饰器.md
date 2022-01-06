@@ -219,5 +219,6 @@ print(fib(333))
 这样我们就非常优雅的实现了fib函数。
 
 
->参考视频
->{{<youtube 5VCywjS8YEA>}}
+>参考视频:<iframe className="place-content-center" id="ytplayer" type="text/html" width="640" height="360"
+  src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&origin=http://example.com"
+  frameborder="0"></iframe>

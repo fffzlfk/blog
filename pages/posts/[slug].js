@@ -2,7 +2,7 @@ import { MDXRemote } from 'next-mdx-remote'
 import Head from 'next/head'
 import Layout from '../../components/layout'
 import Container from '../../components/container'
-import { postFilePaths } from '../../utils/mdxUtils'
+import { postFilePaths } from '../../lib/mdxUtils'
 import mdxToHtml from '../../lib/api'
 import PostHeader from '../../components/post-header'
 import markdownStyles from './../../styles/markdown-styles.module.css'
@@ -32,7 +32,7 @@ export default function PostPage({ source, frontMatter }) {
           <div className="mx-1 px-1">
             <main className={markdownStyles['markdown']}>
               <div className="text-gray-600 dark:text-gray-300">
-                <MDXRemote {...source} components={components} />
+                <MDXRemote {...source} components={components} lazy />
               </div>
             </main>
           </div>

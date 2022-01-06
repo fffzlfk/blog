@@ -1,10 +1,9 @@
 import fs from 'fs'
 import matter from 'gray-matter'
-import Link from 'next/link'
 import Head from 'next/head'
 import path from 'path'
 import Layout from '../components/layout'
-import { postFilePaths, POSTS_PATH } from '../utils/mdxUtils'
+import { postFilePaths, POSTS_PATH } from '../lib/mdxUtils'
 import { HOME_NAME } from '../lib/constant'
 import Container from '../components/container'
 import Intro from '../components/intro'
@@ -29,6 +28,11 @@ export function getStaticProps() {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath))
     const { content, data } = matter(source)
 
+    const allowed = ['title', 'date']
+    Object.keys(data)
+      .filter(key => !allowed.includes(key))
+      .forEach(key => delete data[key]);
+
     return {
       content,
       data,
@@ -36,7 +40,7 @@ export function getStaticProps() {
     }
   })
     .filter(post => post.filePath !== 'about.mdx')
-    .sort((post1, post2) => post1.data.date > post2.data.date)
+    .sort((post1, post2) => new Date(post1.data.date) < new Date(post2.data.date))
 
   return { props: { posts } }
 }
