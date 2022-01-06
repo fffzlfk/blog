@@ -42,9 +42,9 @@ def bar(func):
 
 bar(foo)()
 ```
-{{<notice note>}}
-在Python中function是第一公民，所以可以它作为参数
-{{</notice>}}
+
+>在Python中function是第一公民，所以可以它作为参数
+
 
 这样我们就实现了一个简单的装饰器，我们可以发现这样在调用的时候比较麻烦，Python还提供了这样了一个语法糖：
 

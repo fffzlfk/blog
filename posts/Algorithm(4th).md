@@ -126,7 +126,7 @@ public class QuickUnionUF {
 
 #### quick-union worst case
 
-{{< image src="https://s1.ax1x.com/2020/11/01/B0Esk8.png" position="center" style="border-radius: 8px; width: 50%" >}}
+<img src="https://s1.ax1x.com/2020/11/01/B0Esk8.png" position="center" style="border-radius: 8px; width: 50%" >
 
 ### Weighted quick-union
 
@@ -231,9 +231,9 @@ The very same approach that scientists use to understand the natural world is ef
 
 ### 1.4.6
 
-{{<notice note>}}
+{{<notice note>
 Give the order of growth (as a function of N ) of the running times of each of the following code fragments:
-{{</notice>}}
+{{</notice>
 
 ``` java
 int sum = 0;
@@ -266,9 +266,9 @@ $$ NlgN $$ 线性对数
 
 ### 1.4.15
 
-{{<notice note>}}
+{{<notice note>
 Faster 3-sum. As a warmup, develop an implementation TwoSumFaster that uses a linear algorithm to count the pairs that sum to zero after the array is sorted (in stead of the binary-search-based linearithmic algorithm). Then apply a similar idea to develop a quadratic algorithm for the 3-sum problem.
-{{</notice>}}
+{{</notice>
 
 ``` java
 public static int twoSumFaster(int[] a) {
@@ -369,7 +369,7 @@ public class Merge {
 
 ### Empirical analysis
 
-{{< notice note >}}
+{{< notice note >
 The number of compares $C(N)$ and array accesses $A(N)$ to mergesort an array of size N satisfy the recurrences:  
 $$ C(N) \le C(\lceil{\frac N 2}\rceil) + C(\lfloor{\frac N 2}\rfloor) + N\ \ for N > 1,with \ C(1)=0. $$
 $$
@@ -377,13 +377,13 @@ A(N) \le A(\lceil{\frac N 2}\rceil) + A(\lfloor{\frac N 2}\rfloor) + 6N\ \ for N
 $$
 we solve the recurrence when $ N $ is a power of 2.
 $$ D(N) = 2D(\frac N 2) + N, for N > 1, with\ D(1) = 0. $$  
-{{< /notice >}}
+{{< /notice >
 
 #### Divide-and-conquer recurrence: 
 
 1. proof by picture
 
-    {{< image src="/img/merge-pic.png" position="center" style="border-radius: 8px;" >}}
+    <img src="/img/merge-pic.png" position="center" style="border-radius: 8px;" >
 
 2. proof by expansion
 
@@ -683,19 +683,19 @@ public class Quick {
 ### average-case analysis
 
 $C_N $ satisfies the recurrence $C_0 = C_1=0$ and for $ N\ge 2 $:  
-$$ C_N = (N + 1) + (\frac{C_0+C_{N-1}}{N})+ (\frac{C_1+C_{N-2}}{N})+ ... +(\frac{C_{N-1}+C_{0}}{N}) $$
+$$ C_N = (N + 1) + (\frac{C_0+C_{N-1{N})+ (\frac{C_1+C_{N-2{N})+ ... +(\frac{C_{N-1}+C_{0{N}) $$
 - Multiply both sides by N and collect terms:
 $$ NC_N = N(N+1)+2(C_0+C_1+...+C_{N-1}) $$
 - Substract this from the same equation for $N - 1$:
 $$ NC_N-(N-1)C_{N-1}=2N+2C_{N-1} $$
 - Rearrage terms and devide by $N(N+1)$:
-$$ \frac{C_N}{N+1} = \frac{C_{N-1}}{N} + \frac{2}{N+1} $$
+$$ \frac{C_N}{N+1} = \frac{C_{N-1{N} + \frac{2}{N+1} $$
 - Repeatedly apply above equation:
 $$
 \begin{aligned}
-\frac{C_N}{N+1} &= \frac{C_{N-1}}{N}+\frac{2}{N+1} \cr
-&= \frac{C_{N-2}}{N-1}+\frac{2}{N}+\frac{2}{N+1} \cr
-&= \frac{C_{N-3}}{N-2}+\frac{2}{N-1}+\frac{2}{N}+\frac{2}{N+1} \cr
+\frac{C_N}{N+1} &= \frac{C_{N-1{N}+\frac{2}{N+1} \cr
+&= \frac{C_{N-2{N-1}+\frac{2}{N}+\frac{2}{N+1} \cr
+&= \frac{C_{N-3{N-2}+\frac{2}{N-1}+\frac{2}{N}+\frac{2}{N+1} \cr
 &= \frac 2 3 + \frac 2 4 + \frac 2 5 +...+\frac 2 {N+1}
 \end{aligned}
 $$
@@ -749,7 +749,7 @@ Show, in the style of the trace given with partition(), how that method patition
 
 Show, in the style of the quicksort trace given in this section, how quicksort sorts the array E A S Y Q U E S T I O N (for the purposes of this exercise, ignore the initial shuffle).
 
-{{< image src="https://s1.ax1x.com/2020/10/27/BlExEV.png" position="center" style="border-radius: 8px;" >}}
+<img src="https://s1.ax1x.com/2020/10/27/BlExEV.png" position="center" style="border-radius: 8px;" >
 
 ### 2.3.3
 
@@ -814,7 +814,7 @@ static void sort(Comparable[] a) {
 
 ### API
 
-{{<image src="https://s1.ax1x.com/2020/11/05/BWuxX9.png" position="center" style="width:75%; border-radius:8px">}}
+<img src="https://s1.ax1x.com/2020/11/05/BWuxX9.png" position="center" style="width:75%; border-radius:8px">
 
 ### binary-heap
 
@@ -940,7 +940,7 @@ public class Heap {
 
 #### sorting-algorithms: summary
 
-{{< image src="https://s1.ax1x.com/2020/11/06/BWX9N6.png" position="center" style="width:90%; border-radius: 8px" >}}
+<img src="https://s1.ax1x.com/2020/11/06/BWX9N6.png" position="center" style="width:90%; border-radius: 8px" >
 
 ### 2.4.2
 
@@ -1128,7 +1128,7 @@ class OrderedLinkedMaxPQ<Key extends Comparable<Key>> extends LinkedListPQ<Key> 
 
 Give the heap that results when the keys E A S Y Q U E S T I O N are inserted in that order into an initially empty max-oriented heap.
 
-{{<image src="https://s1.ax1x.com/2020/11/06/BhYuEF.jpg" position="center" style="width:50%; border-radius:8px;">}}
+<img src="https://s1.ax1x.com/2020/11/06/BhYuEF.jpg" position="center" style="width:50%; border-radius:8px;">
 
 
 ### 2.4.7
@@ -1148,13 +1148,13 @@ Draw all of the different heaps that can be made from the five keys A B C D E, t
 #### A B C D E
 
 - 最大堆
-{{<image src="https://s1.ax1x.com/2020/11/06/BhwOIK.jpg" position="center" style="width:70%; border-radius:8px">}}
+<img src="https://s1.ax1x.com/2020/11/06/BhwOIK.jpg" position="center" style="width:70%; border-radius:8px">
 - 最小堆
-{{<image src="https://s1.ax1x.com/2020/11/06/BhwjPO.jpg" position="center" style="width:70%; border-radius:8px;">}}
+<img src="https://s1.ax1x.com/2020/11/06/BhwjPO.jpg" position="center" style="width:70%; border-radius:8px;">
 
 #### A A A B B
 
-{{<image src="https://s1.ax1x.com/2020/11/06/BhBAmR.jpg" position="center" style="width:70%; border-radius:8px;">}}
+<img src="https://s1.ax1x.com/2020/11/06/BhBAmR.jpg" position="center" style="width:70%; border-radius:8px;">
 
 
 ### 2.4.11
@@ -1430,7 +1430,7 @@ public class LazyPrimMST {
     - pq[i] is the index of the key in heap position i
     - qp[i] is the heap position of the key with index i
 - Use swim(qp[i]) implement decreaseKey(i, key).
-{{<image src="https://s3.ax1x.com/2020/11/26/DBAWWR.png" position="center" style="width: 60% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">}}
+<img src="https://s3.ax1x.com/2020/11/26/DBAWWR.png" position="center" style="width: 60% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">
 
 #### EagerPrim Implementation
 
@@ -1493,9 +1493,9 @@ public class PrimMST {
 
 Draw all of the MSTs of graph depicted at right (all edge weights are equal).
 
-{{<image src="https://s3.ax1x.com/2020/11/24/DtaE4K.png" position="right" style="width: 30% ">}}
+<img src="https://s3.ax1x.com/2020/11/24/DtaE4K.png" position="right" style="width: 30% ">
 
-{{<image src="https://i.postimg.cc/jSSvhPHK/4-3-2.jpg" position="center" style="width: 80% ;">}}
+<img src="https://i.postimg.cc/jSSvhPHK/4-3-2.jpg" position="center" style="width: 80% ;">
 
 ### 4.3.3
 
@@ -1515,7 +1515,7 @@ Give a counterexample that shows why the following strategy does not necessarily
 find the MST: ‘Start with any vertex as a single-vertex MST, then add V-1 edges
 to it, always taking next a min-weight edge incident to the vertex most recently added to the MST.’
 
-{{<image src="https://i.postimg.cc/cL2PZRSL/4-3-13.png" position="center" style="width: 80% ;">}}
+<img src="https://i.postimg.cc/cL2PZRSL/4-3-13.png" position="center" style="width: 80% ;">
 
 ## Shortest Paths
 
@@ -1536,7 +1536,7 @@ to it, always taking next a min-weight edge incident to the vertex most recently
     - distTo[w] is length of shortest known path from s to w
     - edgeTo[w] is last edge on shortest known path from s to w
     - if e = v->w gives shorter path to w through v, update both distTo[w] and edgeTo[w]
-    {{<image src="https://i.postimg.cc/fTbTm0tQ/1.jpg" position="center" style="width: 80% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">}}
+    <img src="https://i.postimg.cc/fTbTm0tQ/1.jpg" position="center" style="width: 80% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">
 
 #### Shortest-paths optimality conditions
 
@@ -1570,7 +1570,7 @@ to it, always taking next a min-weight edge incident to the vertex most recently
 
 #### Dijkstra's algorithm Demo
 
-{{<image src="https://i.postimg.cc/mD7ZT0Xb/pic.gif" position="center" style="width: 100% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">}}
+<img src="https://i.postimg.cc/mD7ZT0Xb/pic.gif" position="center" style="width: 100% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">
 
 #### correctness proof
 
@@ -1631,7 +1631,7 @@ public class DijkstraSP {
 
 #### Acyclic shortest paths demo
 
-{{<image src="https://i.postimg.cc/j5bbc9gh/ezgif-4-83690900591b.gif" position="center" style="width: 90% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">}}
+<img src="https://i.postimg.cc/j5bbc9gh/ezgif-4-83690900591b.gif" position="center" style="width: 90% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">
 
 #### Shortest paths in edge-weighted DAGs
 
@@ -1770,13 +1770,13 @@ False. 假设一条最短路径的长度是15, 且一共有五条边，而另外
 
 Change the direction of edge 0->2 in tinyEWD.txt (see page 644). Draw two different
 SPTs that are rooted at 2 for this modified edge-weighted digraph.
-{{<image src="https://i.postimg.cc/fL7gcsnN/graph.png" position="left" style="width: 40% ;">}}
+<img src="https://i.postimg.cc/fL7gcsnN/graph.png" position="left" style="width: 40% ;">
 
 ### 4.5.9
 
 The table below, from an old published road map, purports to give the length of the shortest routes connecting the cities. It contains an error. Correct the table. Also, add a table that shows how to achieve the shortest routes.
 
-{{<image src="https://i.postimg.cc/bv8TXN6S/Snipaste-2020-12-04-21-48-19.jpg" position="center" style="width: 80% ;">}}
+<img src="https://i.postimg.cc/bv8TXN6S/Snipaste-2020-12-04-21-48-19.jpg" position="center" style="width: 80% ;">
 
 |            | Providence | Westerly | New London | Norwich |
 | ---------- | ---------- | -------- | ---------- | ------- |
@@ -1878,7 +1878,7 @@ public class LSD {
 
 #### Summary of the performence of sorting algorithms
 
-{{<image src="https://i.postimg.cc/mkM2KqMV/Snipaste-2020-12-04-21-48-19.jpg" position="center" style="zoom: 80% ;">}}
+<img src="https://i.postimg.cc/mkM2KqMV/Snipaste-2020-12-04-21-48-19.jpg" position="center" style="zoom: 80% ;">
 
 
 ### MSD radix sort
@@ -1967,16 +1967,16 @@ public class LRS {
 
 ### Percolation
 
-{{< embed-pdf url="\pdf\algs\exp1.pdf" >}}
+{{< embed-pdf url="\pdf\algs\exp1.pdf" >
 
 ### 几种排序算法的实验性能比较
 
-{{< embed-pdf url="\pdf\algs\exp2.pdf" >}}
+{{< embed-pdf url="\pdf\algs\exp2.pdf" >
 
 ### Map Routing
 
-{{< embed-pdf url="\pdf\algs\exp3.pdf" >}}
+{{< embed-pdf url="\pdf\algs\exp3.pdf" >
 
 ### Text Indexing
 
-{{< embed-pdf url="\pdf\algs\exp4.pdf" >}}
+{{< embed-pdf url="\pdf\algs\exp4.pdf" >
