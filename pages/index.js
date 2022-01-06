@@ -26,7 +26,7 @@ export default function Index({ posts }) {
 export function getStaticProps() {
   const posts = postFilePaths.map((filePath) => {
     const source = fs.readFileSync(path.join(POSTS_PATH, filePath))
-    const { content, data } = matter(source)
+    const { data } = matter(source)
 
     const allowed = ['title', 'date']
     Object.keys(data)
@@ -34,13 +34,12 @@ export function getStaticProps() {
       .forEach(key => delete data[key]);
 
     return {
-      content,
       data,
       filePath,
     }
   })
     .filter(post => post.filePath !== 'about.mdx')
-    .sort((post1, post2) => new Date(post1.data.date) < new Date(post2.data.date))
+    .sort((post1, post2) => new Date(post2.data.date) - new Date(post1.data.date))
 
   return { props: { posts } }
 }
