@@ -12,6 +12,8 @@ summary: "Object-Oriented Programming"
 showInMenu: false
 ---
 
+## Table of contents
+
 ## C++基础
 
 ### C++对C的扩充

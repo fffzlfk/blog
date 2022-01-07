@@ -19,7 +19,6 @@ module.exports = {
             },
             'a:hover': {
               'color': '#ff7e79',
-              'text-decoration': 'underline',
             },
             'a:focus': {
               'outline-offset': '-2px'

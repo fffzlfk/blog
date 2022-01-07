@@ -12,6 +12,8 @@ summary: "The solution of algs4's exercise"
 showInMenu: false
 ---
 
+## Table of contents
+
 ## Union-Find
 
 ### quickfind

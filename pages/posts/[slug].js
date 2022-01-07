@@ -5,8 +5,12 @@ import Container from '../../components/container'
 import { postFilePaths } from '../../lib/mdx-utils'
 import mdxToHtml from '../../lib/api'
 import PostHeader from '../../components/post-header'
+import H2 from '../../components/h2'
+import H3 from '../../components/h3'
 
 const components = {
+  h2: H2,
+  h3: H3,
   Head,
 }
 
