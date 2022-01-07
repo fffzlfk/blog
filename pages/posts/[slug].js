@@ -18,7 +18,7 @@ export default function PostPage({ source, frontMatter }) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossOrigin="anonymous" />
       </Head>
       <Container>
-        <article className="mb-32">
+        <div className="mb-32">
           <Head>
             <title>
               {frontMatter.title}
@@ -29,13 +29,11 @@ export default function PostPage({ source, frontMatter }) {
             date={frontMatter.date}
           />
           <div className="mx-1 px-1">
-            {/* <main className={markdownStyles['markdown']}> */}
-              <div className="prose prose-lg prose-img:rounded-lg dark:prose-invert max-w-none">
+              <article className="prose prose-lg prose-img:rounded-lg dark:prose-invert max-w-none">
                 <MDXRemote {...source} components={components} lazy />
-              </div>
-            {/* </main> */}
+              </article>
           </div>
-        </article>
+        </div>
       </Container>
     </Layout>
   )

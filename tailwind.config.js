@@ -13,9 +13,6 @@ module.exports = {
               paddingLeft: '9px',
               borderLeft: '6px solid #ff7e79'
             },
-            'pre code': {
-              'font-family': 'Source Code Pro, Courier, monospace',
-            },
             'a': {
               'color': '#326ddb',
               'text-decoration': 'none'
