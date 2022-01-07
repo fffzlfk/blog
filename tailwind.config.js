@@ -5,7 +5,34 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      typography: {
+        DEFAULT: {
+          css: {
+            'h2': {
+              paddingLeft: '9px',
+              borderLeft: '6px solid #ff7e79'
+            },
+            'pre code': {
+              'font-family': 'Source Code Pro, Courier, monospace',
+            },
+            'a': {
+              'color': '#326ddb',
+              'text-decoration': 'none'
+            },
+            'a:hover': {
+              'color': '#ff7e79',
+              'text-decoration': 'underline',
+            },
+            'a:focus': {
+              'outline-offset': '-2px'
+            }
+          },
+        },
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
 }

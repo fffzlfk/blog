@@ -2,10 +2,9 @@ import { MDXRemote } from 'next-mdx-remote'
 import Head from 'next/head'
 import Layout from '../../components/layout'
 import Container from '../../components/container'
-import { postFilePaths } from '../../lib/mdxUtils'
+import { postFilePaths } from '../../lib/mdx-utils'
 import mdxToHtml from '../../lib/api'
 import PostHeader from '../../components/post-header'
-import markdownStyles from './../../styles/markdown-styles.module.css'
 
 const components = {
   Head,
@@ -30,11 +29,11 @@ export default function PostPage({ source, frontMatter }) {
             date={frontMatter.date}
           />
           <div className="mx-1 px-1">
-            <main className={markdownStyles['markdown']}>
-              <div className="text-gray-600 dark:text-gray-300">
+            {/* <main className={markdownStyles['markdown']}> */}
+              <div className="prose prose-lg prose-img:rounded-lg dark:prose-invert max-w-none">
                 <MDXRemote {...source} components={components} lazy />
               </div>
-            </main>
+            {/* </main> */}
           </div>
         </article>
       </Container>

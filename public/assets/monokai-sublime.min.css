@@ -37,7 +37,7 @@ base0F  #cc6633  Deprecated, Opening/Closing Embedded Language Tags, e.g. <?php 
 pre code.hljs {
 	display: block;
 	overflow-x: auto;
-	padding: 1em;
+	font-size: 1em;
 }
 
 code.hljs {
@@ -54,14 +54,6 @@ code.hljs {
 	background-color: #49483e;
 	color: #f8f8f2;
 }
-
-
-/* purposely do not highlight these things */
-
-.hljs-formula,
-.hljs-params,
-.hljs-property {}
-
 
 /* base03 - #75715e -  Comments, Invisibles, Line Highlighting */
 
@@ -210,8 +202,4 @@ code.hljs {
 
 .hljs-meta-keyword {
 	font-weight: bold;
-}
-
-pre>code {
-	font-family: 'Source Code Pro', Courier, monospace;
 }
