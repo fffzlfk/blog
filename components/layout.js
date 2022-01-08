@@ -3,7 +3,7 @@ import Meta from './meta'
 
 export default function Layout({ children }) {
   return (
-    <div className="bg-white dark:bg-[#272727] pb-1 flex flex-col">
+    <div className="bg-white dark:bg-[#272727] flex flex-col">
       <Meta />
       <div className="min-h-screen">
         <Nav />

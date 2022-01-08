@@ -1,35 +1,26 @@
 import { useTheme } from 'next-themes'
 
+const Item = ({ children, url }) => {
+  return (
+    <div className="py-2 text-center text-md font-bold">
+      <a
+        href={url}
+        className="hover:text-success hover:text-[#ff7e79] dark:hover:text-[#577BC1] duration-200 transition-colors">
+        {children}
+      </a>
+    </div>
+  )
+}
+
 export default function Nav() {
 
   const { theme, setTheme } = useTheme()
 
   return (
     <nav className='bg-white dark:bg-[#272727] fixed flex items-center w-full justify-center border-b-2 bg-accent-1 border-accent-2 space-x-10 rounded'>
-      <div className="py-2 text-center text-md font-bold">
-        <a
-          href="/"
-          className="hover:text-success duration-200 transition-colors"
-        >
-          Home
-        </a>
-      </div>
-      <div className="py-2 text-center text-md font-bold">
-        <a
-          href="/posts/about"
-          className="hover:text-success duration-200 transition-colors"
-        >
-          About
-        </a>
-      </div>
-      <div className="py-2 text-center text-md font-bold">
-        <a
-          href="https://github.com/fffzlfk"
-          className="hover:text-success duration-200 transition-colors"
-        >
-          Github
-        </a>
-      </div>
+      <Item url="/">Home</Item>
+      <Item url="/posts/about">About</Item>
+      <Item url="https://github.com/fffzlfk">Github</Item>
       <div className="py-2 text-center text-sm">
         <button
           aria-label="Toggle Dark Mode"

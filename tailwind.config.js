@@ -14,7 +14,7 @@ module.exports = {
               borderLeft: '6px solid #ff7e79'
             },
             'a': {
-              'color': '#326ddb',
+              'color': '#577BC1',
               'text-decoration': 'none'
             },
             'a:hover': {
