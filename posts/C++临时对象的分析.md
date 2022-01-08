@@ -50,17 +50,16 @@ int main() {
     return 0;
 }
 ```
-{{<notice tip>}}
+
 [**右值引用**](https://zh.wikipedia.org/wiki/%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8)  
 C++中，引用（reference）是指绑定到内存中的相应对象上。左值引用是绑定到左值对象上；右值引用是绑定到临时对象上。这里的左值对象是指可以通过取地址&运算符得到该对象的内存地址；而临时对象是不能用取地址&运算符获取到对象的内存地址。
-{{</notice>}}
+
 
 于是经过几番搜索，找到了这个东西：  
-{{<notice tip>}}
+
 **-fno-elide-constructors**
 
 The C++ standard allows an implementation to omit creating a temporary that is only used to initialize another object of the same type. Specifying this option disables that optimization, and forces G++ to call the copy constructor in all cases.
-{{</notice>}}
 
 果然不出所料，当笔者加上这个参数之后
 ```bash

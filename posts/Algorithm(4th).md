@@ -233,9 +233,9 @@ The very same approach that scientists use to understand the natural world is ef
 
 ### 1.4.6
 
-{{<notice note>
+
 Give the order of growth (as a function of N ) of the running times of each of the following code fragments:
-{{</notice>
+
 
 ``` java
 int sum = 0;
@@ -268,9 +268,8 @@ $$ NlgN $$ 线性对数
 
 ### 1.4.15
 
-{{<notice note>
 Faster 3-sum. As a warmup, develop an implementation TwoSumFaster that uses a linear algorithm to count the pairs that sum to zero after the array is sorted (in stead of the binary-search-based linearithmic algorithm). Then apply a similar idea to develop a quadratic algorithm for the 3-sum problem.
-{{</notice>
+
 
 ``` java
 public static int twoSumFaster(int[] a) {
@@ -371,7 +370,6 @@ public class Merge {
 
 ### Empirical analysis
 
-{{< notice note >
 The number of compares $C(N)$ and array accesses $A(N)$ to mergesort an array of size N satisfy the recurrences:  
 $$ C(N) \le C(\lceil{\frac N 2}\rceil) + C(\lfloor{\frac N 2}\rfloor) + N\ \ for N > 1,with \ C(1)=0. $$
 $$
@@ -379,7 +377,6 @@ A(N) \le A(\lceil{\frac N 2}\rceil) + A(\lfloor{\frac N 2}\rfloor) + 6N\ \ for N
 $$
 we solve the recurrence when $ N $ is a power of 2.
 $$ D(N) = 2D(\frac N 2) + N, for N > 1, with\ D(1) = 0. $$  
-{{< /notice >
 
 #### Divide-and-conquer recurrence: 
 
@@ -1965,20 +1962,3 @@ public class LRS {
 }
 ```
 
-## 实验
-
-### Percolation
-
-{{< embed-pdf url="\pdf\algs\exp1.pdf" >
-
-### 几种排序算法的实验性能比较
-
-{{< embed-pdf url="\pdf\algs\exp2.pdf" >
-
-### Map Routing
-
-{{< embed-pdf url="\pdf\algs\exp3.pdf" >
-
-### Text Indexing
-
-{{< embed-pdf url="\pdf\algs\exp4.pdf" >

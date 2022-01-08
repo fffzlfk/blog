@@ -70,7 +70,7 @@ ns2::inflag=-3;
 #### 引用与函数
 
 - 函数的返回值为引用类型
-  <img src="https://i.postimg.cc/P5PdH4VS/1.jpg" position="center" style="zoom: 45% ;">}}
+  <img src="https://i.postimg.cc/P5PdH4VS/1.jpg" position="center" style="zoom: 45% ;">
 
 #### 内联函数
 
@@ -181,10 +181,10 @@ int main() {
 
 ### 对象引用的作用
 
-{{<notice tip>}}
+{{<notice tip>
 1. 避免通过值来传递对象，而是通过引用来传递
 2. 参数传递的是引用，没有构造函数或析构函数被调用，节约了系统资源，提高了运行效率
-{{</notice>}}
+{{</notice>
 
 ```cpp
 /* Author: fffzlfk */
@@ -228,13 +228,13 @@ Destructor
 
 
 ### 常对象
-{{<notice tip>}}
+{{<notice tip>
 1. 常对象的所有数据成员都是常量，不能改变。因此，常对象必须初始化。
 
 2. 不能通过常对象调用普通的成员函数，可以调用常成员函数。
 
 3. 如果要修改常对象中某个数据成员的值，可以将数据成员声明为mutable，这样就可以用声明为const的成员函数来修改它的值。
-{{</notice>}}
+{{</notice>
 ```cpp
 /* Author: fffzlfk */
 #include <bits/stdc++.h>
@@ -264,7 +264,7 @@ int main() {
 
 - 常数据成员
 
-  {{<notice tip>}}
+  {{<notice tip>
   1. 在任何函数中都不能对常数据成员赋值
 
   2. 只能通过构造函数的参数初始化表对常数据成员进行初始化
@@ -276,7 +276,7 @@ int main() {
 
   3. 类的所有对象中的常数据成员的值均不能改变，但不同对象中的该数据成员可以不同（在定义对象时给出）
 
-  {{</notice>}}
+  {{</notice>
   - 示例程序：
   ```cpp
   /* Author: fffzlfk */
@@ -303,14 +303,14 @@ int main() {
 
 - 常成员函数
 
-  {{< notice tip >}}
+  {{< notice tip >
   1. 通过常成员函数来引用本类中的数据成员，但不能修改他们
   2. const 是函数类型的一部分，在声明函数时都要有const，在调用时不必加const
   3. 常成员函数不能更新对象的数据成员，也不能调用该类中的非const成员函数
   4. 通过常对象只能调用它的常成员函数，而不能调用其他成员函数
   5. 常对象中的成员函数不是常成员函数，除非成员函数有const修饰
   6. const关键字可以用于对重载函数的区分
-  {{</notice>}}
+  {{</notice>
 
     ```cpp
     /* Author: fffzlfk */
@@ -360,9 +360,9 @@ int main() {
   ptr1 = &t2; //错误，ptr1不能改变指向
 
   ```
-  {{<notice tip>}}
+  {{<notice tip>
   常指针始终指向同一个对象，但是可以改变其所指对象中数据成员的值。
-  {{</notice>}}
+  {{</notice>
 
 - <font color='#ffff00'>指向常对象的指针</font>
 
@@ -380,9 +380,9 @@ int main() {
   p = &t2;             // 正确，p改为指向t2
   ```
 
-  {{<notice note>}}
+  {{<notice note>
   指向常对象的指针可以指向const和非const型的对象，而指向非const型对象的指针只能指向非const的对象。
-  {{</notice>}}
+  {{</notice>
 
 ### 对象数组
 
@@ -403,7 +403,7 @@ int main() {
   int Box::volume() { return height * width * length; }
 
   int main() {
-      // Box a[2]{{10, 12, 15}, {15, 18, 20}}; C++11标准
+      // Box a[2]{{10, 12, 15}, {15, 18, 20; C++11标准
       Box a[2]{Box(10, 12, 15),
               Box(15, 18, 20)};  // Box a[2] = {Box(10, 12, 15), Box(15, 18,
                                   // 20)}; 加不加等号都可
@@ -431,10 +431,10 @@ int main() {
   }
   ```
 
-  {{<notice warn>}}
+  {{<notice warn>
   在类模板外定义成员函数时，<font color='yellow'>每一个</font>函数前均加上：  
   **template <class 类型参数>**
-  {{</notice>}}
+  {{</notice>
 
 ### 第二次上机题目
 
@@ -484,11 +484,11 @@ int main() {
 
 有时候需要某些函数访问对象的私有成员，可以通过声明该函数为类的友元函数
 
-{{< notice tip >}}
+{{< notice tip >
 - 友元函数是可以直接访问类的私有成员的非成员函数。
 - 它是定义在类外的普通函数，它不属于任何类，但需要在类的定义中加以声明，声明时只需在友元的名称前加上关键字friend，其格式如下：  
 **friend 类型 函数名(形式参数);**
-{{</ notice >}}
+{{</ notice >
   ```cpp
   #include <bits/stdc++.h>
   using namespace std;
@@ -828,7 +828,7 @@ class <派生类名>：<继承方式> <基类名1>，…，<继承方式> <基�
     }
   ```
 - 编译错误
-<img src="https://s1.ax1x.com/2020/11/10/BL72ZT.jpg" position="center" style="border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">}}
+<img src="https://s1.ax1x.com/2020/11/10/BL72ZT.jpg" position="center" style="border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">
 
 #### 两个基类和派生类三者都有同名成员
 
@@ -871,7 +871,7 @@ class <派生类名>：<继承方式> <基类名1>，…，<继承方式> <基�
 - 引进虚基类后，派生类对象中只存在一个虚基类成员的副本
 - 为了保证虚基类在派生类中只继承一次，应当在该基类的所有直接派生类中声明为虚基类，否则仍然会出现对基类的多次继承。
 
-<img src="https://s1.ax1x.com/2020/11/10/BLOP3Q.jpg" position="center" style="width: 60% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">}}
+<img src="https://s1.ax1x.com/2020/11/10/BLOP3Q.jpg" position="center" style="width: 60% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black, 2px 2px 5px black;">
 
 #### 构造函数的调用顺序
 
@@ -1225,7 +1225,7 @@ num = 2001
             return 0;
         }
         ```
-        <img src="https://s3.ax1x.com/2020/11/18/DeW6O0.png" position="center" style="width: 120% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black,2px 2px 5px black;">}}
+        <img src="https://s3.ax1x.com/2020/11/18/DeW6O0.png" position="center" style="width: 120% ;border-radius: 5px; box-shadow: inset 2px 2px 5px black,2px 2px 5px black;">
       - 如果在派生类中没有重新定义虚函数，则不实现动态联编，派生类的对象将使用基类虚函数的代码
       - 一个类中的虚函数说明只对派生类中重定义的函数有影响，对它的基类中的函数并没有影响
         ```cpp
@@ -1426,7 +1426,7 @@ num = 2001
   - 输出流类ostream
   - 文件流类基类fstreambase
   - 字符串流类基类strstreambase
-<img src="https://i.postimg.cc/YSF0JJhX/1.jpg" position="left" style="width: 80%">}}
+<img src="https://i.postimg.cc/YSF0JJhX/1.jpg" position="left" style="width: 80%">
 
 ### I/O流类库的头文件
 
@@ -1776,4 +1776,4 @@ precision:6
 
 ## 大作业
 
-{{< embed-pdf url="\pdf\OOP-bighomework.pdf" >}}
+{{< embed-pdf url="\pdf\OOP-bighomework.pdf" >

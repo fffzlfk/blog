@@ -5,6 +5,7 @@ import Container from '../../components/container'
 import { postFilePaths } from '../../lib/mdx-utils'
 import mdxToHtml from '../../lib/api'
 import PostHeader from '../../components/post-header'
+import PostFooter from '../../components/post-footer'
 import H2 from '../../components/h2'
 import H3 from '../../components/h3'
 import Image from '../../components/image'
@@ -24,7 +25,7 @@ export default function PostPage({ source, frontMatter }) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossOrigin="anonymous" />
       </Head>
       <Container>
-        <div className="mb-32">
+        <div className="mb-12">
           <Head>
             <title>
               {frontMatter.title}
@@ -34,11 +35,10 @@ export default function PostPage({ source, frontMatter }) {
             title={frontMatter.title}
             date={frontMatter.date}
           />
-          <div className="mx-1 px-1">
-            <article className="prose prose-lg prose-img:rounded-lg dark:prose-invert max-w-none">
-              <MDXRemote {...source} components={components} lazy />
-            </article>
-          </div>
+          <article className="prose prose-lg prose-img:rounded-lg dark:prose-invert max-w-none">
+            <MDXRemote {...source} components={components} lazy />
+          </article>
+          <PostFooter />
         </div>
       </Container>
     </Layout>
