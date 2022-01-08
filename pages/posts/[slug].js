@@ -7,11 +7,13 @@ import mdxToHtml from '../../lib/api'
 import PostHeader from '../../components/post-header'
 import H2 from '../../components/h2'
 import H3 from '../../components/h3'
+import Image from '../../components/image'
 
 const components = {
   h2: H2,
   h3: H3,
   Head,
+  img: Image,
 }
 
 export default function PostPage({ source, frontMatter }) {
@@ -33,9 +35,9 @@ export default function PostPage({ source, frontMatter }) {
             date={frontMatter.date}
           />
           <div className="mx-1 px-1">
-              <article className="prose prose-lg prose-img:rounded-lg dark:prose-invert max-w-none">
-                <MDXRemote {...source} components={components} lazy />
-              </article>
+            <article className="prose prose-lg prose-img:rounded-lg dark:prose-invert max-w-none">
+              <MDXRemote {...source} components={components} lazy />
+            </article>
           </div>
         </div>
       </Container>
