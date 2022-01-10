@@ -17,7 +17,7 @@ export default function Nav() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <nav className='bg-white dark:bg-[#272727] fixed flex items-center w-full justify-center border-b-2 bg-accent-1 border-accent-2 space-x-10 rounded'>
+    <nav className='z-50 bg-white dark:bg-[#272727] text-gray-600 dark:text-gray-300  fixed flex items-center w-full justify-center border-b-2 bg-accent-1 border-accent-2 space-x-10 rounded'>
       <Item url="/">Home</Item>
       <Item url="/posts/about">About</Item>
       <Item url="https://github.com/fffzlfk">Github</Item>

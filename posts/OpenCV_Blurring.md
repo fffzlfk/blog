@@ -1,5 +1,5 @@
 ---
-title: "OpenCV_Blurring"
+title: "OpenCV Blurring"
 date: "2022-01-09T07:37:09+08:00"
 ---
 
@@ -62,9 +62,9 @@ $$
     - 应用4种不同的过滤器（在理论中解释过的），并按顺序显示过滤后的图片
 - [代码链接](https://github.com/fffzlfk/opencv_learning/blob/main/src/basic/blur.cpp)
 
-## 函数解释
+### 函数解释
 
-### Normalized Block Filter
+#### Normalized Block Filter
 
 - OpenCV 提供了`blur`函数来用这个滤波器进行平滑处理。
     - `src`：源图像
@@ -73,7 +73,7 @@ $$
     - `anchor: Point(-1, -1)`: 表示锚点（被评估的像素）相对于邻域的位置。如果有一个负值，那么内核的中心被认为是锚点。
     
 
-### Gaussian Filter
+#### Gaussian Filter
 
 - function`GaussianBlur`
     - `src`：源图像
@@ -82,14 +82,14 @@ $$
     - `sigmaX`：x的标准偏差。写成 $0$ 意味着用核大小计算的。
     - `sigmaY`：y的标准差。写 $0$ 意味着是用内核大小计算的。
 
-### Median Filter（中值滤波器）
+#### Median Filter（中值滤波器）
 
 - function`medianBlur`
     - `src`：源图像
     - `dst`: 目的图像
     - `ksize`：内核的大小（只有一个数，因为我们使用的是方形窗口），必须是奇数。
 
-### Bilateral Filter（双边滤波）
+#### Bilateral Filter（双边滤波）
 
 - function`bilateralFilter`
     - `src`：源图像
@@ -120,3 +120,7 @@ $$
 ### 双边滤波
 
 ![](https://s3.bmp.ovh/imgs/2022/01/787448c87c53ff10.png)
+
+## Reference
+
+- [Smoothing Images](https://docs.opencv.org/4.5.5/d7/da8/tutorial_table_of_content_imgproc.html)
