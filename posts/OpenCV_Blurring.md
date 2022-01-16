@@ -121,6 +121,6 @@ $$
 
 ![](https://s3.bmp.ovh/imgs/2022/01/787448c87c53ff10.png)
 
-## Reference
+## References
 
-- [Smoothing Images](https://docs.opencv.org/4.5.5/d7/da8/tutorial_table_of_content_imgproc.html)
+<https://docs.opencv.org/4.5.5/d7/da8/tutorial_table_of_content_imgproc.html>

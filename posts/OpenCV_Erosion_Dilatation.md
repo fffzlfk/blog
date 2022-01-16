@@ -117,3 +117,7 @@ void Dilation(int, void *) {
 ## 结果
 
 ![](https://i.imgur.com/4ZpgH4P.png)
+
+## References
+
+<https://docs.opencv.org/4.5.5/db/df6/tutorial_erosion_dilatation.html>
