@@ -11,7 +11,7 @@ export default function PostPreview({
       <h3 className="text-gray-600 dark:text-gray-300 text-3xl mb-1 leading-snug">
         <Link as={`/posts/${slug.replace(/\.mdx?$/, '')}`}
           href={`/posts/[slug]`}>
-          <a className="hover:text-[#ff7e79] dark:hover:text-[#577BC1]">{title}</a>
+          <a className="hover:text-[#ff7e79]">{title}</a>
         </Link>
       </h3>
       <div className="text-lg mb-4">

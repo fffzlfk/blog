@@ -6,6 +6,7 @@ const H2 = ({ children }) => {
     return (
         <h2 id={anchor}>
             {children}
+            {" "}
             <a href={link}>
                 ¶
             </a>

@@ -5,7 +5,7 @@ const Item = ({ children, url }) => {
     <div className="py-2 text-center text-md font-bold">
       <a
         href={url}
-        className="hover:text-success hover:text-[#ff7e79] dark:hover:text-[#577BC1] duration-200 transition-colors">
+        className="hover:text-success hover:text-[#ff7e79] duration-200 transition-colors">
         {children}
       </a>
     </div>
@@ -17,10 +17,10 @@ export default function Nav() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <nav className='z-50 bg-white dark:bg-[#272727] text-gray-600 dark:text-gray-300  fixed flex items-center w-full justify-center border-b-2 bg-accent-1 border-accent-2 space-x-10 rounded'>
+    <nav className='z-50 bg-white dark:bg-[#161B22] text-gray-600 dark:text-gray-300  fixed flex items-center w-full justify-center border-b-2 bg-accent-1 border-accent-2 space-x-10 rounded'>
       <Item url="/">Home</Item>
       <Item url="/posts/about">About</Item>
-      <Item url="https://github.com/fffzlfk">Github</Item>
+      <Item url="https://github.com/fffzlfk">GitHub</Item>
       <div className="py-2 text-center text-sm">
         <button
           aria-label="Toggle Dark Mode"
