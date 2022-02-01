@@ -4,7 +4,7 @@ import Head from "next/head"
 const PostFooter = () => {
     const { theme } = useTheme();
     return (
-        <div className='flex items-center w-full justify-center'>
+        <div className='flex items-center w-full justify-center flex-col'>
             <Head>
                 <script src="https://giscus.app/client.js"
                     data-repo="fffzlfk/blog"

@@ -6,6 +6,7 @@ const H3 = ({ children }) => {
     return (
         <h3 id={anchor}>
             {children}
+            {" "}
             <a href={link}>
                 ¶
             </a>
