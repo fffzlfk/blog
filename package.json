@@ -26,6 +26,5 @@
     "remark-parse": "^10.0.1",
     "remark-toc": "^8.0.1",
     "tailwindcss": "^3.0.10"
-  },
-  "homepage": "https://fffzlfk.github.io/blog"
+  }
 }
