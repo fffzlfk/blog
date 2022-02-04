@@ -13,14 +13,24 @@ on:
 
 jobs:
   build-export-and-deploy:
-    name: Build, export and publish sample site to the `sample-site-build` branch
+    name: Build, export and publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build with the latest action rev
-        uses: tsg-iitkgp/next-build-export-action@v1.1
-        env:
-          BUILD_DIR: .
-          PAGES_BRANCH: gh-pages
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          OUTPUT_DIR: build
+
+      - name: Install
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: install # will run `yarn install` command
+
+      - name: Build
+        uses: borales/actions-yarn@v2.3.0
+        with:
+          cmd: build # will run `yarn build` command
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} 
+          publish_dir: ./build
+
