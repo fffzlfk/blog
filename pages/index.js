@@ -8,8 +8,16 @@ import { HOME_NAME } from '../lib/constant'
 import Container from '../components/container'
 import Intro from '../components/intro'
 import MoreStories from '../components/more-stories'
+import { useState } from 'react'
+import Pagination from '../components/pagination'
+
+const MAX_POSTS = 6;
 
 export default function Index({ posts }) {
+  const [page, setPage] = useState(1);
+  const count = Math.round((posts.length + MAX_POSTS - 1) / MAX_POSTS);
+  posts = posts.slice((page - 1) * MAX_POSTS, (page - 1) * MAX_POSTS + MAX_POSTS);
+
   return (
     <Layout>
       <Head>
@@ -18,6 +26,11 @@ export default function Index({ posts }) {
       <Container>
         <Intro />
         {posts.length > 0 && <MoreStories posts={posts} />}
+        <Pagination
+          count={count}
+          page={page}
+          setPage={setPage}
+        />
       </Container>
     </Layout>
   )
