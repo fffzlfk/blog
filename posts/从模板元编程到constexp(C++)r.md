@@ -71,7 +71,7 @@ int main() {
 }
 ```
 
-```
+```asm
 fact(int):
         push    rbp
         mov     rbp, rsp

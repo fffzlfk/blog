@@ -403,6 +403,16 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@stefanprobst/remark-shiki@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@stefanprobst/remark-shiki/-/remark-shiki-2.1.0.tgz#3a287bcfe39bd07476d30be8f3bccd4f1b3fb9e1"
+  integrity sha512-cIQBMke/gP2W8sqxW2QW0qWQFbPnE8WQU4k32lKwEAOm/hZRuXxULRDdhNgJzMRoZBtVedyuW0RsedKKD94CCQ==
+  dependencies:
+    json5 "^2.2.0"
+    parse-numeric-range "^1.3.0"
+    unified "^10.1.0"
+    unist-util-visit "^4.0.0"
+
 "@tailwindcss/typography@^0.5.0":
   version "0.5.0"
   resolved "https://registry.npmmirror.com/@tailwindcss/typography/download/@tailwindcss/typography-0.5.0.tgz#47886ec46ac41e1211d24fea05301046d9b30906"
@@ -1229,6 +1239,11 @@ emojis-list@^2.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
 
+emoticon@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/emoticon/-/emoticon-4.0.1.tgz#2d2bbbf231ce3a5909e185bbb64a9da703a1e749"
+  integrity sha512-dqx7eA9YaqyvYtUhJwT4rC1HIp82j5ybS1/vQ42ur+jBe17dJMwZE4+gvL1XadSFfxaPFFGt3Xsw+Y8akThDlw==
+
 encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
@@ -1402,13 +1417,6 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-fault@^2.0.0:
-  version "2.0.1"
-  resolved "https://registry.npmmirror.com/fault/download/fault-2.0.1.tgz?cache=0&sync_timestamp=1636281651550&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Ffault%2Fdownload%2Ffault-2.0.1.tgz#d47ca9f37ca26e4bd38374a7c500b5a384755b6c"
-  integrity sha1-1Hyp83yibkvTg3SnxQC1o4R1W2w=
-  dependencies:
-    format "^0.2.0"
-
 fill-range@^7.0.1:
   version "7.0.1"
   resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
@@ -1458,11 +1466,6 @@ foreach@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"
   integrity sha1-C+4AUBiusmDQo6865ljdATbsG5k=
-
-format@^0.2.0:
-  version "0.2.2"
-  resolved "https://registry.nlark.com/format/download/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
-  integrity sha1-1hcBB+nv3E7TDJ3DkBbflCtctYs=
 
 forwarded@0.2.0:
   version "0.2.0"
@@ -1699,7 +1702,7 @@ hast-util-to-parse5@^6.0.0:
     xtend "^4.0.0"
     zwitch "^1.0.0"
 
-hast-util-to-text@^3.0.0, hast-util-to-text@^3.1.0:
+hast-util-to-text@^3.1.0:
   version "3.1.1"
   resolved "https://registry.npmmirror.com/hast-util-to-text/download/hast-util-to-text-3.1.1.tgz?cache=0&sync_timestamp=1633677876959&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fhast-util-to-text%2Fdownload%2Fhast-util-to-text-3.1.1.tgz#b7699a75f7a61af6e0befb67660cd78460d96dc6"
   integrity sha1-t2madfemGvbgvvtnZgzXhGDZbcY=
@@ -1734,11 +1737,6 @@ he@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
-
-highlight.js@~11.3.0:
-  version "11.3.1"
-  resolved "https://registry.npmmirror.com/highlight.js/download/highlight.js-11.3.1.tgz#813078ef3aa519c61700f84fe9047231c5dc3291"
-  integrity sha512-PUhCRnPjLtiLHZAQ5A/Dt5F8cWZeMyj9KRsACsWT+OD6OP0x6dp5OmT5jdx0JgEyPxPZZIPQpRN2TciUT7occw==
 
 hmac-drbg@^1.0.1:
   version "1.0.1"
@@ -2079,12 +2077,17 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
-json5@^2.1.2:
+json5@^2.1.2, json5@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.0.tgz#2dfefe720c6ba525d9ebd909950f0515316c89a3"
   integrity sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==
   dependencies:
     minimist "^1.2.5"
+
+jsonc-parser@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-3.0.0.tgz#abdd785701c7e7eaca8a9ec8cf070ca51a745a22"
+  integrity sha512-fQzRfAbIBnR0IQvftw9FJveWiHp72Fg20giDrHz6TdfB12UH/uue0D3hm57UB5KgAVuniLMCaS8P1IMj9NR7cA==
 
 katex@^0.13.0:
   version "0.13.24"
@@ -2168,7 +2171,7 @@ lodash.uniq@4.5.0, lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.17.19:
+lodash@^4.17.19, lodash@^4.17.21:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -2184,15 +2187,6 @@ loose-envify@^1.1.0:
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
-
-lowlight@^2.0.0:
-  version "2.4.1"
-  resolved "https://registry.npmmirror.com/lowlight/download/lowlight-2.4.1.tgz?cache=0&sync_timestamp=1636306316125&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Flowlight%2Fdownload%2Flowlight-2.4.1.tgz#59ea891967ec83395f2d61de8cbfe3fa9cd401c7"
-  integrity sha512-mQkAG0zGQ9lcYecEft+hl9uV1fD6HpURA83/TYrsxKvb8xX2mfyB+aaV/A/aWmhhEcWVzr9Cc+l/fvUYfEUumw==
-  dependencies:
-    "@types/hast" "^2.0.0"
-    fault "^2.0.0"
-    highlight.js "~11.3.0"
 
 make-dir@^3.0.2:
   version "3.1.0"
@@ -2859,6 +2853,13 @@ next@latest:
     "@next/swc-win32-ia32-msvc" "12.0.7"
     "@next/swc-win32-x64-msvc" "12.0.7"
 
+node-emoji@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.11.0.tgz#69a0150e6946e2f115e9d7ea4df7971e2628301c"
+  integrity sha512-wo2DpQkQp7Sjm2A0cq+sN7EHKO6Sl0ctXeBdFZrL9T9+UywORbufTcTZxom8YqpLQt/FqNMUkOpkZrJVYSKD3A==
+  dependencies:
+    lodash "^4.17.21"
+
 node-fetch@2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
@@ -3018,6 +3019,11 @@ parse-json@^5.0.0:
     error-ex "^1.3.1"
     json-parse-even-better-errors "^2.3.0"
     lines-and-columns "^1.1.6"
+
+parse-numeric-range@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/parse-numeric-range/-/parse-numeric-range-1.3.0.tgz#7c63b61190d61e4d53a1197f0c83c47bb670ffa3"
+  integrity sha512-twN+njEipszzlMJd4ONUYgSfZPDxgHhT9Ahed5uTigpQn90FggW4SA/AIPq/6a149fTbE9qBEcSwE3FAEp6wQQ==
 
 parse5@^6.0.0:
   version "6.0.1"
@@ -3325,17 +3331,6 @@ regenerator-runtime@^0.13.4:
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
   integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==
 
-rehype-highlight@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.npmmirror.com/rehype-highlight/download/rehype-highlight-5.0.2.tgz#de952123cd4d9672f21a4a38d3b119b88a08eafa"
-  integrity sha512-ZNm8V8BQUDn05cJPzAu/PjiloaFFrh+Pt3bY+NCcdCggI7Uyl5mW0FGR7RATeIz5/ECUd1D8Kvjt4HaLPmnOMw==
-  dependencies:
-    "@types/hast" "^2.0.0"
-    hast-util-to-text "^3.0.0"
-    lowlight "^2.0.0"
-    unified "^10.0.0"
-    unist-util-visit "^4.0.0"
-
 rehype-katex@^6.0.2:
   version "6.0.2"
   resolved "https://registry.npmmirror.com/rehype-katex/download/rehype-katex-6.0.2.tgz#20197bbc10bdf79f6b999bffa6689d7f17226c35"
@@ -3359,6 +3354,15 @@ rehype-parse@^8.0.0:
     hast-util-from-parse5 "^7.0.0"
     parse5 "^6.0.0"
     unified "^10.0.0"
+
+remark-emoji@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/remark-emoji/-/remark-emoji-3.0.2.tgz#786e88af1ecae682d74d7e1219989f34708205da"
+  integrity sha512-hEgxEv2sBtvhT3tNG/tQeeFY3EbslftaOoG14dDZndLo25fWJ6Fbg4ukFbIotOWWrfXyASjXjyHT+6n366k3mg==
+  dependencies:
+    emoticon "^4.0.0"
+    node-emoji "^1.11.0"
+    unist-util-visit "^4.1.0"
 
 remark-footnotes@2.0.0:
   version "2.0.0"
@@ -3589,6 +3593,15 @@ shell-quote@1.7.3:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.3.tgz#aa40edac170445b9a431e17bb62c0b881b9c4123"
   integrity sha512-Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==
+
+shiki@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/shiki/-/shiki-0.10.0.tgz#85f21ecfa95b377ff64db6c71442c22c220e9540"
+  integrity sha512-iczxaIYeBFHTFrQPb9DVy2SKgYxC4Wo7Iucm7C17cCh2Ge/refnvHscUOxM85u57MfLoNOtjoEFUWt9gBexblA==
+  dependencies:
+    jsonc-parser "^3.0.0"
+    vscode-oniguruma "^1.6.1"
+    vscode-textmate "5.2.0"
 
 side-channel@^1.0.4:
   version "1.0.4"
@@ -3910,7 +3923,7 @@ unified@9.2.0:
     trough "^1.0.0"
     vfile "^4.0.0"
 
-unified@^10.0.0:
+unified@^10.0.0, unified@^10.1.0:
   version "10.1.1"
   resolved "https://registry.npmmirror.com/unified/download/unified-10.1.1.tgz?cache=0&sync_timestamp=1637256363650&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Funified%2Fdownload%2Funified-10.1.1.tgz#345e349e3ab353ab612878338eb9d57b4dea1d46"
   integrity sha512-v4ky1+6BN9X3pQrOdkFIPWAaeDsHPE1svRDxq7YpTc2plkIqFMwukfqM+l0ewpP9EfwARlt9pPFAeWYhHm8X9w==
@@ -4034,7 +4047,7 @@ unist-util-visit@^3.0.0:
     unist-util-is "^5.0.0"
     unist-util-visit-parents "^4.0.0"
 
-unist-util-visit@^4.0.0:
+unist-util-visit@^4.0.0, unist-util-visit@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmmirror.com/unist-util-visit/download/unist-util-visit-4.1.0.tgz#f41e407a9e94da31594e6b1c9811c51ab0b3d8f5"
   integrity sha1-9B5Aep6U2jFZTmscmBHFGrCz2PU=
@@ -4152,6 +4165,16 @@ vm-browserify@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
+
+vscode-oniguruma@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/vscode-oniguruma/-/vscode-oniguruma-1.6.1.tgz#2bf4dfcfe3dd2e56eb549a3068c8ee39e6c30ce5"
+  integrity sha512-vc4WhSIaVpgJ0jJIejjYxPvURJavX6QG41vu0mGhqywMkQqulezEqEQ3cO3gc8GvcOpX6ycmKGqRoROEMBNXTQ==
+
+vscode-textmate@5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-5.2.0.tgz#01f01760a391e8222fe4f33fbccbd1ad71aed74e"
+  integrity sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==
 
 watchpack@2.3.0:
   version "2.3.0"
