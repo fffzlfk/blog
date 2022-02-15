@@ -27,6 +27,7 @@ export default function Index({ posts }) {
         <Intro />
         {posts.length > 0 && <MoreStories posts={posts} />}
         <Pagination
+          className="justify-self-center"
           count={count}
           page={page}
           setPage={setPage}

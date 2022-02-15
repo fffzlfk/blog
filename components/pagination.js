@@ -34,8 +34,8 @@ export default function Pagination({ count, page, setPage }) {
     }
 
     return (
-        <nav className="">
-            <ul className="inline-flex -space-x-px">
+        <nav className="relative">
+            <ul className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 inline-flex -space-x-px">
                 <li key={0}><a onClick={onPrevious} className="select-none py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a></li>
                 {items}
                 <li key={count + 1}><a onClick={onNext} className="select-none py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a></li>
