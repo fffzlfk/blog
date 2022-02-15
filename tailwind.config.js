@@ -15,14 +15,16 @@ module.exports = {
             },
             'a': {
               'color': '#577BC1',
-              'text-decoration': 'none'
+              'text-decoration': 'none',
             },
             'a:hover': {
               'color': '#ff7e79',
             },
             'a:focus': {
               'outline-offset': '-2px'
-            }
+            },
+            'word-wrap': 'break-word',
+            'word-break': 'break-all'
           },
         },
       },
